@@ -55,18 +55,20 @@ const App = () => {
     return <TailSpin color="#00BFFF" height={80} width={80} />;
   } else {
     return  (
-      <>
-      {!isLoginOrSignUpPage && <Header />}
-      <div className="mainContent"> 
-        <Routes>
-          <Route index element={<Protect element={<Home />} />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/verify-email" element={<VerifyEmail />} /> 
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </div>
-      {!isLoginOrSignUpPage && <Footer />}
-      </>
+    <>
+    {!isLoginOrSignUpPage && 
+    <Header />
+    }
+    <Routes>
+      <Route index element={<Protect element={<Home />} />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/verify-email" element={<VerifyEmail />} /> 
+      <Route path="/" element={<Home />} />
+    </Routes>
+    {!isLoginOrSignUpPage && 
+    <Footer />
+    }
+    </>
   );
   }
 };
