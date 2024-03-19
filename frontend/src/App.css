@@ -1,0 +1,7 @@
+.App {
+  height: 95vh;   
+}
+
+.mainContent {
+  padding-top: 70px; /* Adjust accordingly if your header height changes */
+}
