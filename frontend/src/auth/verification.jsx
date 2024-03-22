@@ -97,65 +97,67 @@ const VerifyEmail = () => {
   };
 
   return (
-    <div className={style.containerVerify}>
-      <div className="text-center mb-5">
-        <h1 className={style.h1}>Atlas Signature</h1>
-        <button
-          onClick={logout}
-          style={{ position: "absolute", right: 20, top: 20 }}
-        >
-          Logout
-        </button>
-      </div>
-      {loading ? (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "20px",
-          }}
-        >
-          <TailSpin color="#00BFFF" height={50} width={50} />
-        </div>
-      ) : (
+    <div className={`${style['body__login']}`}>
+      <div className={style.containerVerify}>
         <div className="text-center mb-5">
-          <p className={style.h1}>
-            {showResend
-              ? "Verification email sent again. Enter the code above to continue."
-              : "Enter 6 digit Verification Code"}
-          </p>
-          <input
-            className={style.inputVerify}
-            value={verificationCode}
-            onChange={handleVerificationCodeChange}
-            type="text"
-            pattern="\d*"
-            maxLength="6"
-            placeholder="Enter Verification Code"
-          />
+          <h1 className={style.h1}>Web App</h1>
+          <button
+            onClick={logout}
+            style={{ position: "absolute", right: 20, top: 20 }}
+          >
+            Logout
+          </button>
+        </div>
+        {loading ? (
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
+              justifyContent: "center",
               marginTop: "20px",
             }}
           >
-            <button onClick={verify} className={style.buttonVerify}>
-              Verify Email
-            </button>
-            {showResend && (
-              <button
-                onClick={resendVerificationEmail}
-                className={style.buttonVerify}
-                style={{ marginTop: "10px" }}
-              >
-                Resend Verification Email
-              </button>
-            )}
+            <TailSpin color="#00BFFF" height={50} width={50} />
           </div>
-        </div>
-      )}
+        ) : (
+          <div className="text-center mb-5">
+            <p className={style.h1}>
+              {showResend
+                ? "Verification email sent again. Enter the code above to continue."
+                : "Enter 6 digit Verification Code"}
+            </p>
+            <input
+              className={style.inputVerify}
+              value={verificationCode}
+              onChange={handleVerificationCodeChange}
+              type="text"
+              pattern="\d*"
+              maxLength="6"
+              placeholder="Enter Verification Code"
+            />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                marginTop: "20px",
+              }}
+            >
+              <button onClick={verify} className={style.buttonVerify}>
+                Verify Email
+              </button>
+              {showResend && (
+                <button
+                  onClick={resendVerificationEmail}
+                  className={style.buttonVerify}
+                  style={{ marginTop: "10px" }}
+                >
+                  Resend Verification Email
+                </button>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

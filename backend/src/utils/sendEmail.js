@@ -33,13 +33,13 @@ const sendEmail = async (info, receiverEmail, body) => {
     <body>
         <div class="container">
             <div class="header">
-                <h2>Atlas Sign</h2>
+                <h2>WebApp</h2>
             </div>
             <div class="content">
                 ${body}
             </div>
             <div class="footer">
-                &copy; 2023 All rights reserved | Atlas Signatures<br>
+                &copy; 2023 All rights reserved | My Webapp<br>
                 For any questions, please contact our <a href="https://www.yourwebsite.com/contact">Customer Service</a>.
             </div>
         </div>
@@ -63,13 +63,13 @@ const sendEmail = async (info, receiverEmail, body) => {
             subject = 'Password Reset Link'
             break;
         default:
-            subject = 'Atlas Sign'
+            subject = 'WebApp'
             break;
     }
 
 
     const mailOptions = {
-        from: '"Atlas Sign" <' + process.env.EMAIL_USER + '>',
+        from: '"Web App" <' + process.env.EMAIL_USER + '>',
         to: recipients,
         subject,
         html: emailTemplate

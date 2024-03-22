@@ -1,11 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
-* {
-	box-sizing: border-box;
-}
-
-body {
+.body__login {
 	background: #f6f5f7;
 	display: flex;
 	justify-content: center;
@@ -262,7 +258,7 @@ body {
 	width: 40px;
 }
 
-footer {
+.footer {
     background-color: #222;
     color: #fff;
     font-size: 14px;

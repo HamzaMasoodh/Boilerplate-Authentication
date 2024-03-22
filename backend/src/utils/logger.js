@@ -11,7 +11,7 @@ const customLogFormat = winston.format.printf(({ level, message, timestamp }) =>
     return `${timestamp} : ${level.toUpperCase()} : ${message}`;
 });
 const fileTransport = new winston.transports.DailyRotateFile({
-    filename: 'logs/Docu-Sign-%DATE%.log',
+    filename: 'logs/Project-%DATE%.log',
     datePattern: 'YYYY-MM-DD',
     zippedArchive: false,
     maxSize: '20m',

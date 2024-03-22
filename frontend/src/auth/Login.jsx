@@ -112,9 +112,9 @@ function Login() {
     });
   }, []);
   return (
-    <div>
+    <div className={`${style['body__login']}`}>
       <div className="text-center mb-5">
-        <h1 className={style.h1}>Atlas Signature</h1>
+        <h1 className={style.h1}>Web App</h1>
       </div>
       <div
         className={`${style.container} ${

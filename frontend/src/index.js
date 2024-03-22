@@ -11,13 +11,12 @@ import store from "./store/store";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  // <React.StrictMode>
+  <React.StrictMode>
   <Provider store={store}>
     <BrowserRouter>
       <ToastContainer />
       <App />
     </BrowserRouter>
   </Provider>
-  // {/* // </React.StrictMode> */}
-
+  </React.StrictMode>
 );
